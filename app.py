@@ -1,13 +1,4 @@
-import os
-from pprint import pprint
-
-from dotenv import load_dotenv
-from openai import OpenAI
-
-load_dotenv()
-
-client = OpenAI(api_key=os.environ['API_KEY'])
-
+from config import client
 
 # stream = client.chat.completions.create(
 #     model='gpt-3.5-turbo',  # definindo o modelo
@@ -36,4 +27,4 @@ stream = client.chat.completions.create(
 )
 
 
-pprint(stream.choices[0].message)
+print(stream.choices[0].message)
