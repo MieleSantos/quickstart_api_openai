@@ -2,7 +2,9 @@ import os
 
 from dotenv import load_dotenv
 from langchain.globals import set_llm_cache
-from langchain_community.cache import InMemoryCache, SQLiteCache
+from langchain_community.cache import SQLiteCache
+
+# from langchain_community.cache import InMemoryCache
 from langchain_openai import OpenAI
 
 load_dotenv()
