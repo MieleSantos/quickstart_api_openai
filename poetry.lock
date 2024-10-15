@@ -187,6 +187,27 @@ tests = ["cloudpickle", "hypothesis", "mypy (>=1.11.1)", "pympler", "pytest (>=4
 tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
+name = "beautifulsoup4"
+version = "4.12.3"
+description = "Screen-scraping library"
+optional = false
+python-versions = ">=3.6.0"
+files = [
+    {file = "beautifulsoup4-4.12.3-py3-none-any.whl", hash = "sha256:b80878c9f40111313e55da8ba20bdba06d8fa3969fc68304167741bbf9e082ed"},
+    {file = "beautifulsoup4-4.12.3.tar.gz", hash = "sha256:74e3d1928edc070d21748185c46e3fb33490f22f52a3addee9aee0f4f7781051"},
+]
+
+[package.dependencies]
+soupsieve = ">1.2"
+
+[package.extras]
+cchardet = ["cchardet"]
+chardet = ["chardet"]
+charset-normalizer = ["charset-normalizer"]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
 name = "certifi"
 version = "2024.8.30"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -312,6 +333,20 @@ files = [
 ]
 
 [[package]]
+name = "click"
+version = "8.1.7"
+description = "Composable command line interface toolkit"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
+    {file = "click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -421,6 +456,25 @@ files = [
     {file = "distro-1.9.0-py3-none-any.whl", hash = "sha256:7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2"},
     {file = "distro-1.9.0.tar.gz", hash = "sha256:2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"},
 ]
+
+[[package]]
+name = "duckduckgo-search"
+version = "6.3.1"
+description = "Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "duckduckgo_search-6.3.1-py3-none-any.whl", hash = "sha256:408fbfe07ae084eca5d0b5ebd0234187362d9e507ca1549f264104ce13006b58"},
+    {file = "duckduckgo_search-6.3.1.tar.gz", hash = "sha256:f43c7fa61518537bb5327aa9411520b04baa7c32b199d816b97d38f451f71824"},
+]
+
+[package.dependencies]
+click = ">=8.1.7"
+primp = ">=0.6.4"
+
+[package.extras]
+dev = ["mypy (>=1.11.1)", "pytest (>=8.3.1)", "pytest-asyncio (>=0.23.8)", "ruff (>=0.6.1)"]
+lxml = ["lxml (>=5.2.2)"]
 
 [[package]]
 name = "frozenlist"
@@ -873,6 +927,21 @@ tenacity = ">=8.1.0,<8.4.0 || >8.4.0,<9.0.0"
 typing-extensions = ">=4.7"
 
 [[package]]
+name = "langchain-experimental"
+version = "0.3.2"
+description = "Building applications with LLMs through composability"
+optional = false
+python-versions = "<4.0,>=3.9"
+files = [
+    {file = "langchain_experimental-0.3.2-py3-none-any.whl", hash = "sha256:b6a26f2a05e056a27ad30535ed306a6b9d8cc2e3c0326d15030d11b6e7505dbb"},
+    {file = "langchain_experimental-0.3.2.tar.gz", hash = "sha256:d41cc28c46f58616d18a1230595929f80a58d1982c4053dc3afe7f1c03f22426"},
+]
+
+[package.dependencies]
+langchain-community = ">=0.3.0,<0.4.0"
+langchain-core = ">=0.3.6,<0.4.0"
+
+[[package]]
 name = "langchain-openai"
 version = "0.2.2"
 description = "An integration package connecting OpenAI and LangChain"
@@ -1225,6 +1294,26 @@ files = [
 [package.extras]
 dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
+
+[[package]]
+name = "primp"
+version = "0.6.4"
+description = "HTTP client that can impersonate web browsers, mimicking their headers and `TLS/JA3/JA4/HTTP2` fingerprints"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "primp-0.6.4-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:e627330c1f2b723b523dc2e47caacbc5b5d0cd51ca11583b42fb8cde4da60d7d"},
+    {file = "primp-0.6.4-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:e0cb7c05dd56c8b9741042fd568c0983fc19b0f3aa209a3940ecc04b4fd60314"},
+    {file = "primp-0.6.4-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a4adc200ccb39e130c478d8b1a94f43a5b359068c6cb65b7c848812f96d96992"},
+    {file = "primp-0.6.4-cp38-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:0ebae2d3aa36b04028e4accf2609d31d2e6981659e8e2effb09ee8ba960192e1"},
+    {file = "primp-0.6.4-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:77f5fa5b34eaf251815622258419a484a2a9179dcbae2a1e702a254d91f613f1"},
+    {file = "primp-0.6.4-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:14cddf535cd2c4987412e90ca3ca35ae52cddbee6e0f0953d26b33a652a95692"},
+    {file = "primp-0.6.4-cp38-abi3-win_amd64.whl", hash = "sha256:96177ec2dadc47eaecbf0b22d2e93aeaf964a1be9a71e6e318d2ffb9e4242743"},
+    {file = "primp-0.6.4.tar.gz", hash = "sha256:0a3de63e46a50664bcdc76e7aaf7060bf8443698efa902864669c5fca0d1abdd"},
+]
+
+[package.extras]
+dev = ["certifi", "pytest (>=8.1.1)"]
 
 [[package]]
 name = "propcache"
@@ -1812,6 +1901,17 @@ files = [
 ]
 
 [[package]]
+name = "soupsieve"
+version = "2.6"
+description = "A modern CSS selector implementation for Beautiful Soup."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "soupsieve-2.6-py3-none-any.whl", hash = "sha256:e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9"},
+    {file = "soupsieve-2.6.tar.gz", hash = "sha256:e2e68417777af359ec65daac1057404a3c8a5455bb8abc36f1a9866ab1a51abb"},
+]
+
+[[package]]
 name = "sqlalchemy"
 version = "2.0.35"
 description = "Database Abstraction Library"
@@ -2052,6 +2152,20 @@ socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
+name = "wikipedia"
+version = "1.4.0"
+description = "Wikipedia API for Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "wikipedia-1.4.0.tar.gz", hash = "sha256:db0fad1829fdd441b1852306e9856398204dc0786d2996dd2e0c8bb8e26133b2"},
+]
+
+[package.dependencies]
+beautifulsoup4 = "*"
+requests = ">=2.0.0,<3.0.0"
+
+[[package]]
 name = "yarl"
 version = "1.15.2"
 description = "Yet another URL library"
@@ -2166,4 +2280,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "895150f6e2b1c8f652ec74472b300074805872a55120e3d16c98c8f88784be5c"
+content-hash = "79e11608fd85998a7eacda5a14937151afb569bc677ad1e9d8e78dadf2473c3a"
