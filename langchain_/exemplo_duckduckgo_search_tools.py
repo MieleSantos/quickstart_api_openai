@@ -1,10 +1,7 @@
 import os
 
 from dotenv import load_dotenv
-from langchain.prompts import PromptTemplate
 from langchain_community.tools import DuckDuckGoSearchRun
-from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import ChatOpenAI
 
 load_dotenv()
 
